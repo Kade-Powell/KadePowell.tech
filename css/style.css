@@ -8,6 +8,7 @@
 
 :root {
 	--text-color: #50fa7b;
+	--hl-color: #ff79c6;
 }
 
 body {
@@ -41,6 +42,9 @@ a {
 	color: var(--text-color);
 	text-decoration: none;
 }
+a:hover {
+	color: var(--hl-color);
+}
 
 p {
 	margin: 20px 0;
@@ -61,6 +65,11 @@ nav ul li {
 	cursor: pointer;
 }
 
+nav ul li:hover {
+	color: var(--hl-color);
+	cursor: pointer;
+}
+
 .container {
 	max-width: 600px;
 	margin: auto;
@@ -75,14 +84,15 @@ nav ul li {
 	background: #44475a;
 	padding: 20px;
 }
-
 .wb-header {
-	background: #282a36;
-	outline-style: solid;
-	outline-width: 1px;
-	outline-color: #44475a;
+	color: #282a36;
 }
-
+.wb-icon {
+	background-color: #44475a;
+	border-style: solid;
+	border-width: 1px;
+	border-color: var(--text-color);
+}
 .hidden {
 	display: none;
 }
