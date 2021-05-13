@@ -3,16 +3,16 @@ const contact = document.querySelector('#contact');
 const aboutContent = document.querySelector('#about-content');
 const contactContent = document.querySelector('#contact-content');
 
+var width =
+	window.innerWidth ||
+	document.documentElement.clientWidth ||
+	document.body.clientWidth;
+
 about.addEventListener('click', () => {
 	const aboutBox = new WinBox({
 		title: 'About Me',
 		// modal: true,
-		width: '450',
-		height: '400px',
-		top: 50,
-		right: 50,
-		bottom: 50,
-		left: 50,
+		width: width < 1000 ? '60%' : '450',
 		mount: aboutContent,
 		onfocus: function () {
 			this.setBackground('#50fa7b');
@@ -26,12 +26,9 @@ about.addEventListener('click', () => {
 contact.addEventListener('click', () => {
 	const contactBox = new WinBox({
 		title: 'Contact Me',
-		width: '450px',
-		height: '400px',
-		top: 150,
-		right: 50,
-		bottom: 50,
-		left: 250,
+		width: width < 1000 ? '60%' : '450',
+		x: 'center',
+		y: 'center',
 		mount: contactContent,
 		onfocus: function () {
 			this.setBackground('#50fa7b');
