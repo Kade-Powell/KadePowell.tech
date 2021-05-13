@@ -12,7 +12,7 @@ about.addEventListener('click', () => {
 	const aboutBox = new WinBox({
 		title: 'About Me',
 		// modal: true,
-		width: width < 1000 ? '60%' : '450',
+		width: width < 1000 ? '50%' : '500',
 		mount: aboutContent,
 		onfocus: function () {
 			this.setBackground('#50fa7b');
@@ -26,7 +26,7 @@ about.addEventListener('click', () => {
 contact.addEventListener('click', () => {
 	const contactBox = new WinBox({
 		title: 'Contact Me',
-		width: width < 1000 ? '60%' : '450',
+		width: width < 1000 ? '50%' : '500',
 		x: 'center',
 		y: 'center',
 		mount: contactContent,
